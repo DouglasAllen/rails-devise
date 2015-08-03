@@ -78,4 +78,3 @@ end
 
 # what I added 
 gem 'rack-source'
-gem 'rails_serve_static_assets'
