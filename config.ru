@@ -12,19 +12,7 @@ map '/public' do
   run lambda {|env| Rack::Directory.new(@root).call(env)} 
 end
 
-# https://github.com/DouglasAllen/sprockets
-map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.context_class.class_eval do
-    def asset_path(path, options = {})
-      "public/assets/#{path}"
-    end
-  end
- 
-  environment.append_path 'javascripts'
-  environment.append_path 'stylesheets'
-  run environment
-end
+
 
 
 map '/config' do
