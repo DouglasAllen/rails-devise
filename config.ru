@@ -17,12 +17,12 @@ map '/assets' do
   environment = Sprockets::Environment.new
   environment.context_class.class_eval do
     def asset_path(path, options = {})
-      "assets/#{path}"
+      "app/assets/#{path}"
     end
   end
  
-  environment.append_path 'assets/javascripts'
-  environment.append_path 'assets/stylesheets'
+  environment.append_path 'app/assets/javascripts'
+  environment.append_path 'app/assets/stylesheets'
   run environment
 end
 
