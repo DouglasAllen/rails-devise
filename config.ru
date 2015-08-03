@@ -21,8 +21,8 @@ map '/assets' do
     end
   end
  
-  environment.append_path 'app/assets/javascripts'
-  environment.append_path 'app/assets/stylesheets'
+  environment.append_path 'assets/javascripts'
+  environment.append_path 'assets/stylesheets'
   run environment
 end
 
